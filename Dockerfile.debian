@@ -113,6 +113,14 @@ RUN \
           /var/log/stunnel4 \
           && \
     rm -rf /var/cache/fontconfig/*
+    
+# Install Darktable
+RUN \
+    echo 'deb http://download.opensuse.org/repositories/graphics:/darktable/Debian_Next/ /' > \
+    /etc/apt/sources.list.d/graphics:darktable.list
+    apt-get update
+    apt-get install -y darktable
+    add-pkg darktable
 
 # Install noVNC.
 RUN \
