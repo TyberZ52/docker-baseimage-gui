@@ -1,0 +1,19 @@
+# Pull base image.
+FROM jlesage/baseimage-gui:alpine-3.6
+
+# Install xterm.
+RUN \
+    add-pkg cmake gcc-c++ intltool gtk3-devel libxml2-devel \
+    lensfun-devel librsvg2-devel sqlite-devel libcurl-devel \
+    libjpeg-turbo-devel libtiff-devel lcms2-devel json-glib-devel \
+    exiv2-devel pugixml-devel libsoup-devel libgphoto2-devel \
+    OpenEXR-devel libwebp-devel flickcurl-devel openjpeg-devel \
+    libsecret-devel GraphicsMagick-devel osm-gps-map-devel colord-devel \
+    colord-gtk-devel cups-devel SDL-devel \
+    darktable
+
+# Copy the start script.
+COPY startapp.sh /startapp.sh
+
+# Set the name of the application.
+ENV APP_NAME="darktable"
