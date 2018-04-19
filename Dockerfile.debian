@@ -113,28 +113,6 @@ RUN \
           /var/log/stunnel4 \
           && \
     rm -rf /var/cache/fontconfig/*
-    
-# Install Darktable
-RUN \
-    echo 'deb http://download.opensuse.org/repositories/graphics:/darktable/Debian_Next/ /' > \
-    /etc/apt/sources.list.d/graphics:darktable.list
-    apt-get update
-    apt-get install -y cmake gcc-c++ intltool gtk3-devel libxml2-devel \
-    lensfun-devel librsvg2-devel sqlite-devel libcurl-devel \
-    libjpeg-turbo-devel libtiff-devel lcms2-devel json-glib-devel \
-    exiv2-devel pugixml-devel libsoup-devel libgphoto2-devel \
-    OpenEXR-devel libwebp-devel flickcurl-devel openjpeg-devel \
-    libsecret-devel GraphicsMagick-devel osm-gps-map-devel colord-devel \
-    colord-gtk-devel cups-devel SDL-devel\
-    darktable
-    add-pkg cmake gcc-c++ intltool gtk3-devel libxml2-devel \
-    lensfun-devel librsvg2-devel sqlite-devel libcurl-devel \
-    libjpeg-turbo-devel libtiff-devel lcms2-devel json-glib-devel \
-    exiv2-devel pugixml-devel libsoup-devel libgphoto2-devel \
-    OpenEXR-devel libwebp-devel flickcurl-devel openjpeg-devel \
-    libsecret-devel GraphicsMagick-devel osm-gps-map-devel colord-devel \
-    colord-gtk-devel cups-devel SDL-devel \
-    darktable
 
 # Install noVNC.
 RUN \
