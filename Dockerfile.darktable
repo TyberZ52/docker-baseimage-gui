@@ -1,5 +1,5 @@
 # Pull base image.
-FROM jlesage/baseimage-gui:alpine-3.6
+FROM TyberZ52/baseimage-gui:debian-8
 
 # Install xterm.
 RUN \
